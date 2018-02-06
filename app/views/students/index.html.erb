@@ -7,6 +7,6 @@
 <% end %>
 
 
-<%= @students.each do |std| %>
-  <%= render partial: 'student', locals: {student: std} %>
+<%= @students.each do |student| %>
+  <%= render partial: 'student', locals: {student: student} %>
 <% end %>
