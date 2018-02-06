@@ -16,9 +16,9 @@ class Student < ActiveRecord::Base
 
   def self.search(query)
     if query.nil? || query.empty?
-      Student.all
+      self.all
     else
-      Student.all.select { |std| /#{query}/i.match(std.name).present? }
+      self.all.select { |std| /#{query}/i.match(std.name).present? }
     end
   end
 end
